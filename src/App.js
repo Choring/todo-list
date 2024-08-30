@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import { Container } from 'react-bootstrap';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { TodoInput } from './component/TodoInput';
+import { TodoList } from './component/TodoList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main-container'>
+      <Container className='pt-5'>
+        <h1 className='text-center fw-bold text-white'>Choing's TO-DO LIST</h1>
+        <TodoInput />
+        <TodoList />
+      </Container>
     </div>
   );
 }
